@@ -10,7 +10,7 @@ pythonShell.run = sync(pythonShell.run);
 sync.fiber(function()
 {	
 	// 이곳에 Token화하기 위한 본문이 들어간다.
-	var inputText = '....'
+	var inputText = '....';
 
 	pyresult = sync.await(pythonShell.run('tokenizer_twitter.py', 
 		{args:[new Buffer(inputText).toString('base64')]},sync.defer()));
